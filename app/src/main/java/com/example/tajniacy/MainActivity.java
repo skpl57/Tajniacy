@@ -1,7 +1,11 @@
 package com.example.tajniacy;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +14,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    private SharedPreferences sharedPref;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +29,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        sharedPref = getSharedPreferences("AppData", MODE_PRIVATE);
+        editor = sharedPref.edit();
 
-        Log.d("Cos", "Kocham Cię <3");
-        Log.d("Cos", "Kici kici <3");
+        LinearLayout linearLayout = findViewById(R.id.main);
 
-        Log.d("Cos", "Kici kici <3");
-        Log.d("Cos", "Kici kici <3");
-        Log.d("Cos", "Kici kici <3");
-
-
-
-
+        LinearLayout nowy = new LinearLayout(this);
     }
 }
