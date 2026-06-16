@@ -23,10 +23,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.d("Cos", "Kocham Cię <3");
-        Log.d("Cos", "Kocham Cię <3");
-        Log.d("Cos", "Kocham Cię <3");
-        Log.d("Cos", "Kocham kotka <3");
-        Log.d("Cos", "Muaaa <3");
         Log.d("Cos", "Kici kici <3");
         Log.d("Cos", "Woof woof! <3");
 
