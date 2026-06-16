@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.d("Cos", "Kocham Cię <3");
-        Log.d("Cos", "Kici kici <3");fkdslfksjfklds
+        Log.d("Cos", "Kici kici <3");
 
 
 
