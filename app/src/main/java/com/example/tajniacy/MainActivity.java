@@ -1,7 +1,12 @@
 package com.example.tajniacy;
 
+import static android.widget.LinearLayout.HORIZONTAL;
+
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +15,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    private LinearLayout row;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +30,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Log.d("Cos", "Kocham Cię <3");
-        Log.d("Cos", "Kici kici <3");
+        for(int i = 0; i < 20; i++){
+            Log.d("i", i + "");
+            if(i % 4 == 0){
+                row = new LinearLayout(this);
+                row.setOrientation(HORIZONTAL);
+                Log.d("modulo", i + "");
+                mainLayout.addView(row);
+            }
+            button = new Button(this);
+            button.setText("miał");
+            row.addView(button);
 
-        Log.d("mua", "Kici kici <3");
-        Log.d("--set-upstream origin master", "Kici kici <3");
-        Log.d("gg", "Kici kici <3");
+
+        }
+
 
 
 
