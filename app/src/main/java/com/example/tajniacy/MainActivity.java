@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putBoolean("SAVED_STATE_G2", false);
 
         LinearLayout main = findViewById(R.id.main);
+        LinearLayout TilesMain = findViewById(R.id.TilesMain);
 
         for(int i = 0; i < 20; i++){
             Log.d("i", i + "");
@@ -54,16 +55,16 @@ public class MainActivity extends AppCompatActivity {
                 row.setOrientation(HORIZONTAL);
                 row.setGravity(1);
                 Log.d("modulo", i + "");
-                main.addView(row);
+                TilesMain.addView(row);
             }
             button = new Button(this);
             button.setText("miał");
             button.setHeight(250);
             button.setWidth(250);
             row.addView(button);
+
+
         }
-
-
 
         Button button1 = findViewById(R.id.button);
 

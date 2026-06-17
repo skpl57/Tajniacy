@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="BlueBg">#8BC9FF</color>
+    <color name="BlueBgShadow">#4E9FD5</color>
+    <color name="BlueTx">#20648E</color>
+    <color name="GreenBg">#7DC17F</color>
+    <color name="GreenBgShadow">#689762</color>
+    <color name="GreenTx">#346414</color>
+    <color name="YellowBg">#FFDCB8FF</color>
 </resources>
