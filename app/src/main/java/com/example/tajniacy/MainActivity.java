@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        LinearLayout main = findViewById(R.id.main);
 
         for(int i = 0; i < 20; i++){
             Log.d("i", i + "");
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 row = new LinearLayout(this);
                 row.setOrientation(HORIZONTAL);
                 Log.d("modulo", i + "");
-                mainLayout.addView(row);
+                main.addView(row);
             }
             button = new Button(this);
             button.setText("miał");
