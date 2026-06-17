@@ -6,5 +6,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity" />
+    android:background="@color/BlueBg"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#293C39"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/BlueBgShadow"
+            android:textColor="@color/BlueTx"
+            app:strokeWidth="8dp"
+            app:cornerRadius="8dp"
+            app:strokeColor="@color/BlueTx"
+            android:textSize="30dp"
+            android:text="GRACZ 1" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/GreenTx"
+            app:strokeWidth="8dp"
+            app:cornerRadius="8dp"
+            app:strokeColor="@color/GreenTx"
+            android:textSize="30dp"
+            android:backgroundTint="@color/GreenBgShadow"
+            android:text="GRACZ 2" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-14dp"
+        android:layout_height="14dp"
+        android:background="@color/BlueBgShadow" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        android:textColor="@color/BlueTx"
+        android:gravity="center"
+        android:text="Przyszła wskazówka" />
+
+    <LinearLayout
+        android:id="@+id/TilesMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/Hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/BlueBgShadow"
+            android:backgroundTint="@color/BlueBgShadow"
+            android:ems="8"
+            android:gravity="center"
+            android:hint="Wskazówka"
+            android:inputType="text"
+            android:textColor="@color/BlueTx"
+            android:textColorHint="@color/BlueBg"
+            android:textSize="30dp" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonCount"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            app:cornerRadius="2dp"
+            android:backgroundTint="#5AA6DB"
+            android:textSize="20dp"
+            android:textColor="@color/BlueTx"
+            android:text="2" />
+
+    </LinearLayout>
+
+</LinearLayout>

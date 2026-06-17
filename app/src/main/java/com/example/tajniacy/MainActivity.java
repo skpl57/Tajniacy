@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         });
         sharedPref = getSharedPreferences("AppData", MODE_PRIVATE);
         editor = sharedPref.edit();
-        LinearLayout main = findViewById(R.id.main);
+        LinearLayout TilesMain = findViewById(R.id.TilesMain);
 
         for(int i = 0; i < 20; i++){
             Log.d("i", i + "");
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 row.setOrientation(HORIZONTAL);
                 row.setGravity(1);
                 Log.d("modulo", i + "");
-                main.addView(row);
+                TilesMain.addView(row);
             }
             button = new Button(this);
             button.setText("miał");
