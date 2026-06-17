@@ -3,6 +3,7 @@ package com.example.tajniacy;
 import static android.view.View.TEXT_ALIGNMENT_CENTER;
 import static android.widget.LinearLayout.HORIZONTAL;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Layout;
@@ -38,8 +39,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         sharedPref = getSharedPreferences("AppData", MODE_PRIVATE);
         editor = sharedPref.edit();
+        editor.putBoolean("SAVED_STATE_G1", false);
+        editor.putBoolean("SAVED_STATE_G2", false);
+
         LinearLayout main = findViewById(R.id.main);
 
         for(int i = 0; i < 20; i++){
@@ -56,11 +61,19 @@ public class MainActivity extends AppCompatActivity {
             button.setHeight(250);
             button.setWidth(250);
             row.addView(button);
-
-
         }
 
 
+
+        Button button1 = findViewById(R.id.button);
+
+        button1.setOnClickListener(
+                v -> {
+                    Intent teamIntent = new Intent(this, TeamActivity.class);
+                    teamIntent.putExtra("TEAM", false); // false G1, true G2
+                    startActivity(teamIntent);
+                }
+        );
 
 
 
